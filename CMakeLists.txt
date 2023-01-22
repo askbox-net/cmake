@@ -2,7 +2,8 @@ cmake_minimum_required(VERSION 3.25)
 project(main_cmake C)
 
 set(CMAKE_C_FLAGS "-Wall -Wextra -Werror")
-set(CMAKE_C_FLAGS_DEBUG "-g3 -O0 -pg")
+set(CMAKE_C_FLAGS_DEBUG "-g3 -O0")
+set(CMAKE_C_FLAGS_RELEASE "-O2")
 
 include_directories(${PROJECT_SOURCE_DIR}/include)
 

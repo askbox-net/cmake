@@ -3,12 +3,14 @@ RM = rm -rf
 BUILD_PATH = build
 
 
-all: configure build
+all: debug
 
-configure:
-	cmake -B $(BUILD_PATH) .
+release:
+	cmake -B $(BUILD_PATH) -DCMAKE_BUILD_TYPE=Release .
+	cmake --build $(BUILD_PATH)
 
-build:
+debug:
+	cmake -B $(BUILD_PATH) -DCMAKE_BUILD_TYPE=Debug .
 	cmake --build $(BUILD_PATH)
 
 run:
